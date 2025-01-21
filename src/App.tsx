@@ -5,7 +5,9 @@ import Keyboard from "./components/Keyboard";
 import GameResult from './components/GameResult';
 
 export default function Home() {
+  // @ts-ignore
   const [word, setWord] = useState<string>("REACT");
+  // @ts-ignore
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [submissions, setSubmissions] = useState<string[]>([]); // Track all submitted guesses
