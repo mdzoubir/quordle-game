@@ -11,6 +11,7 @@ interface GameBoardProps {
 const GameBoard: React.FC<GameBoardProps> = ({ word, guesses, currentGuess, rows, cols }) => {
 
     // Function to determine the style for each letter
+    // @ts-ignore
     const getLetterStyle = (letter: string, index: number, guess: string): string => {
         if (letter === word[index]) {
             return 'bg-green-500 text-white'; // Correct position (success)
