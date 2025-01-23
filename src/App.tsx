@@ -6,6 +6,7 @@ import GameResultModal from "./components/GameResultModal";
 
 export default function Home() {
   const [word, setWord] = useState<string>("");
+  // @ts-ignore
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [currentGuess, setCurrentGuess] = useState<string>("");
   const [submissions, setSubmissions] = useState<string[]>([]);
@@ -23,7 +24,6 @@ export default function Home() {
       const response = await fetch(`https://random-word-api.herokuapp.com/word?number=1&length=${length}`);
       const data = await response.json();
       console.log(data);
-
       return data[0].toUpperCase(); // Convert the word to uppercase
     } catch (error) {
       console.error("Error fetching word:", error);
